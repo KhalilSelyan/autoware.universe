@@ -10895,8 +10895,6 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
@@ -12410,54 +12408,6 @@
             
           
         
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../system/system_error_monitor/">System error monitor</a>
-          
-        </div>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_16_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_11_16">
-          <span class="md-nav__icon md-icon"></span>
-          System error monitor
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-      
-      
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_17" >
-      
-      
-        
-          
-            
-          
-        
           
         
       
@@ -12467,14 +12417,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../system/system_monitor/">System monitor</a>
           
-            <label for="__nav_11_17">
+            <label for="__nav_11_16">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_17_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_11_17">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_16_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_11_16">
           <span class="md-nav__icon md-icon"></span>
           System monitor
         </label>
@@ -12495,7 +12445,7 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_17_2" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_16_2" >
       
       
         
@@ -12529,13 +12479,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_11_17_2" id="__nav_11_17_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_11_16_2" id="__nav_11_16_2_label" tabindex="0">
           Docs
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_17_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_11_17_2">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_16_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_11_16_2">
           <span class="md-nav__icon md-icon"></span>
           Docs
         </label>
@@ -12766,7 +12716,7 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_18" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_17" >
       
       
         
@@ -12783,8 +12733,8 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_18_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_11_18">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_17_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_11_17">
           <span class="md-nav__icon md-icon"></span>
           Topic state monitor
         </label>
@@ -12814,7 +12764,7 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_19" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_18" >
       
       
         
@@ -12831,8 +12781,8 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_19_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_11_19">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_18_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_11_18">
           <span class="md-nav__icon md-icon"></span>
           Velodyne monitor
         </label>
@@ -13434,7 +13384,7 @@
 <li>Ego vehicle is not in autonomous driving state</li>
 </ul>
 <ul>
-<li>When the ego vehicle is not moving (Current Velocity is very low)</li>
+<li>When the ego vehicle is not moving (Current Velocity is below a 0.1 m/s threshold)</li>
 </ul>
 <h3 id="2-generate-a-predicted-path-of-the-ego-vehicle">2. Generate a predicted path of the ego vehicle<a class="headerlink" href="#2-generate-a-predicted-path-of-the-ego-vehicle" title="Permanent link">#</a></h3>
 <p>AEB generates a predicted footprint path based on current velocity and current angular velocity obtained from attached sensors. Note that if <code>use_imu_path</code> is <code>false</code>, it skips this step. This predicted path is generated as:</p>
@@ -13595,6 +13545,34 @@ d = v_{ego}*t_{response} + v_{ego}^2/(2*a_{min}) -(sign(v_{obj})) * v_{obj}^2/(2
 <td align="left">double</td>
 <td align="left">down sampling parameters of z-axis for voxel grid filter</td>
 <td align="left">100000.0</td>
+</tr>
+<tr>
+<td align="left">cluster tolerance</td>
+<td align="left">[m]</td>
+<td align="left">double</td>
+<td align="left">maximum allowable distance between any two points to be considered part of the same cluster</td>
+<td align="left">0.15</td>
+</tr>
+<tr>
+<td align="left">cluster_minimum_height</td>
+<td align="left">[m]</td>
+<td align="left">double</td>
+<td align="left">at least one point in a cluster must be higher than this value for the cluster to be included in the set of possible collision targets</td>
+<td align="left">0.1</td>
+</tr>
+<tr>
+<td align="left">minimum_cluster_size</td>
+<td align="left">[-]</td>
+<td align="left">int</td>
+<td align="left">minimum required amount of points contained by a cluster for it to be considered as a possible target obstacle</td>
+<td align="left">10</td>
+</tr>
+<tr>
+<td align="left">maximum_cluster_size</td>
+<td align="left">[-]</td>
+<td align="left">int</td>
+<td align="left">maximum amount of points contained by a cluster for it to be considered as a possible target obstacle</td>
+<td align="left">10000</td>
 </tr>
 <tr>
 <td align="left">min_generated_path_length</td>
